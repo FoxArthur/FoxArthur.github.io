@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "fullpage.js": "^4.0.20"
+    "fullpage.js": "^4.0.20",
+    "three": "^0.155.0"
   }
 }
