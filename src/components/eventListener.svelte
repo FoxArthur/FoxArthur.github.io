@@ -37,6 +37,12 @@
     const timelineElements = document.querySelectorAll(".timeline-right");
     const timelineElements2 = document.querySelectorAll(".timeline-right2");
     const timelineElements3 = document.querySelectorAll(".timeline-right3");
+    const prButton = document.querySelectorAll(".pr-button");
+    const prButton2 = document.querySelectorAll(".pr-button2");
+    const prButton3 = document.querySelectorAll(".pr-button3");
+    const prButton4 = document.querySelectorAll(".pr-button4");
+    const prButton5 = document.querySelectorAll(".pr-button5");
+    const prButton6 = document.querySelectorAll(".pr-button6");
     animElements.forEach((el) => observer.observe(el));
     animElements2.forEach((el) => observer.observe(el));
     animElements3.forEach((el) => observer.observe(el));
@@ -47,6 +53,13 @@
     timelineElements.forEach((el) => observer.observe(el));
     timelineElements2.forEach((el) => observer.observe(el));
     timelineElements3.forEach((el) => observer.observe(el));
+    prButton.forEach((el) => observer.observe(el));
+    prButton2.forEach((el) => observer.observe(el));
+    prButton3.forEach((el) => observer.observe(el));
+    prButton4.forEach((el) => observer.observe(el));
+    prButton5.forEach((el) => observer.observe(el));
+    prButton6.forEach((el) => observer.observe(el));
+    
 
 });
 </script>
