@@ -13,6 +13,7 @@
   import EventListener from "./components/eventListener.svelte";
   import Timeline from "./components/timeline.svelte";
   import Experience from "./components/experience.svelte";
+  import Lastpage from "./components/lastpage.svelte";
   
   
 
@@ -22,8 +23,13 @@
       // options here
       autoScrolling: true,
       scrollHorizontally: true,
-      verticalCentered:false
+      verticalCentered:false,
+      navigation: true,
+      navigationPosition: 'right',
+      navigationTooltips: ['Home', 'About Me', 'Education', 'Experience', 'Contact'],
+      
     });
+    
   });
 
   
@@ -36,22 +42,22 @@
 <main>
     <div id="fullpage">
       <div class="section ">
-        <div class="grid sm:grid-cols-2 ">
+        <div class="grid md:grid-cols-2 ">
           <div class="flex items-center justify-center h-screen">
             <h1 class="anim-right title text-slate-200 text-center text-8xl">Arthur Vos</h1>
           </div>
           <div>
-            <img class="ml-12 mt-10 anim-left" width="80%" src="../src/assets/images/coding.svg" alt="svg">
+            <img class=" invisible h-0 md:h-auto md:visible md:ml-12 md:mt-10 anim-left" width="80%" src="../src/assets/images/coding.svg" alt="svg">
           </div>
         </div>
       </div>
       <div class="section ">
         <div class="flex items-center justify-center h-screen">
           <section>
-            <div class=" px-4  sm:px-6 lg:px-8">
+            <div class=" px-4  md:px-6 lg:px-8">
               <div class="grid grid-cols-1 h-screen lg:grid-cols-2">
                 <div class="relative z-10 lg:py-16">
-                  <div class="relative h-64 sm:h-80 lg:h-full">
+                  <div class="relative h-64 md:h-80 lg:h-full">
                     <img
                       alt="House"
                       src="../src/assets/images/gala-crop.jpg"
@@ -66,8 +72,8 @@
                     class="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-neutral-800"
                   ></span>
           
-                  <div class="p-8 sm:p-16 lg:p-16">
-                    <h2 class="text-2xl font-bold sm:text-3xl text-slate-200">
+                  <div class="p-8 md:p-16 lg:p-16">
+                    <h2 class="text-2xl font-bold md:text-3xl text-slate-200">
                       Who am I?
                     </h2>
           
@@ -89,14 +95,14 @@
       </div>
       <div class="section">
 
-        <div class="grid sm:grid-cols-2 ">
+        <div class="grid md:grid-cols-2 ">
           <div class="flex items-center justify-center h-screen">
             <div class="anim-right3 ">
               <Timeline/>
             </div>
           </div>
           <div>
-            <img class="ml-12 mt-40 anim-left3 rounded-lg shadow-none transition-shadow duration-100 ease hover:shadow-lg hover:shadow-slate-700 cursor-pointer "  width="90%" src="https://www.hoornbeeck.nl/app/uploads/2020/04/2021-10-14-Hoornbeeck-Amersfoort-originele-kwaliteit-165.jpg" alt="svg">
+            <img class="invisible h-0 md:h-auto md:visible ml-12 md:mt-40 anim-left3 rounded-lg shadow-none transition-shadow duration-100 ease hover:shadow-lg hover:shadow-slate-700 cursor-pointer "  width="90%" src="https://www.hoornbeeck.nl/app/uploads/2020/04/2021-10-14-Hoornbeeck-Amersfoort-originele-kwaliteit-165.jpg" alt="svg">
             
           </div>
         </div>
@@ -108,7 +114,9 @@
         </div>
         <Experience/>
       </div>
-      <div class="section">Some section</div>
+      <div class="section">
+        <Lastpage/>
+      </div>
   </div>
 </main>
 <style>
@@ -135,7 +143,7 @@
 .anim-right, .anim-right2, .anim-right3, .anim-right4 {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
+    transform: translateX(-80%);
     
 }
 .anim-left, .anim-left2, .anim-left3 {

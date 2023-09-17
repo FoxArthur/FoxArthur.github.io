@@ -14,13 +14,16 @@
         }
         
       } else {
-        if(entry.target == document.querySelector(".anim-right") || entry.target == document.querySelector(".anim-right2") || entry.target == document.querySelector(".anim-right3") || entry.target == document.querySelector(".timeline-right") || entry.target == document.querySelector(".timeline-right2") || entry.target == document.querySelector(".timeline-right3")){
+        if(entry.target == document.querySelector(".anim-right2") || entry.target == document.querySelector(".anim-right3") || entry.target == document.querySelector(".timeline-right") || entry.target == document.querySelector(".timeline-right2") || entry.target == document.querySelector(".timeline-right3")){
           entry.target.setAttribute("style", "opacity: 0; filter: blur(5px); transform: translateX(-100%); ")
         } else if(entry.target == document.querySelector(".anim-left") || entry.target == document.querySelector(".anim-left2") || entry.target == document.querySelector(".anim-left3")){
           entry.target.setAttribute("style", "opacity: 0; filter: blur(5px); transform: translateX(100%);")
         } else if(entry.target == document.querySelector(".anim-right4"))
         {
           entry.target.setAttribute("style", "opacity: 0; filter: blur(5px); transform: translateX(-400%); ")
+        } else if(entry.target == document.querySelector(".anim-right"))
+        {
+          entry.target.setAttribute("style", "opacity: 0; filter: blur(5px); transform: translateX(-80%); ")
         }
 
       }
